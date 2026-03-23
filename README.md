@@ -22,10 +22,12 @@ php -S 127.0.0.1:8000 -t public
 ### GET /api/users/top
 
 Топ-3 пользователей по сумме заказов.
+
 Запрос:
 ```bash
 curl http://127.0.0.1:8000/api/users/top
 ```
+
 Ответ:
 ```json
 [{"userId":1,"totalAmount":"12500"},{"userId":2,"totalAmount":"9800"},{"userId":3,"totalAmount":"5400"}]
@@ -34,11 +36,12 @@ curl http://127.0.0.1:8000/api/users/top
 ### GET /api/user?id={id}
 
 Получение пользователя. Защищено от SQL-инъекций.
-bash
+
 Запрос:
 ```bash
 curl "http://127.0.0.1:8000/api/user?id=1"
 ```
+
 Ответ:
 ```json
 {"id":1,"name":"User 1"}
@@ -49,11 +52,12 @@ curl "http://127.0.0.1:8000/api/user?id=1"
 ### POST /api/vacancies/{id}/apply
 
 Отклик на вакансию. Проверяет существование, активность, уникальность.
-bash
+
 Запрос:
 ```bash
 curl -X POST http://127.0.0.1:8000/api/vacancies/1/apply
 ```
+
 Ответ:
 ```json
 {"status":"ok"}
