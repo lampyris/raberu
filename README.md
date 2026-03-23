@@ -7,7 +7,7 @@
 
 ### Установка
 ```bash
-git clone <repo>
+git clone https://github.com/lampyris/raberu.git
 cd raberu
 composer install
 createdb raberu
